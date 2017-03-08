@@ -1,0 +1,45 @@
+body,html{width: 100%;height: 100%;margin: 0;padding: 0;}
+#ProgressBarID{position: fixed;top: 30%;width: 100%}
+
+.loading{background: url("images/loadingBg.jpg") no-repeat center;background-size: 100% 100%;height: 100%;width: 100%;overflow: hidden}
+.loading .gif{width: 100%;display: block;margin-top: 1.5rem}
+.loading p{width: 100%;text-align: center;position: absolute;bottom:1rem;font-size: .5rem;color: white;}
+.loading .shake{width: 3rem;position: absolute;top:67%;left: 35%;opacity: .6;display: none}
+
+
+#page1{height:100%;width: 100%;background:url("images/wxchat2.jpg") no-repeat center;background-size:100% 100%;display: none;overflow: hidden}
+#page1 div{margin: .5rem .44rem;overflow: hidden;display: none}
+#page1 a{font-size: .38rem;line-height: 1rem;text-decoration: none;display: inline-block;float: left;padding:.2rem .5rem;margin-left: .2rem;background: url("images/talk.png") no-repeat center;background-size: 100% 100%}
+#page1 img{width: 1rem;float: left;margin-left: .2rem}
+#page1 .P1Th{background: none;}
+#page1 .P1Th img{width: 5rem;}
+.typed-cursor{display: none;}
+
+#page2{height:100%;width:100%;background:url("images/gussBg.jpg")no-repeat center;background-size:100% 100%;overflow: hidden;display: none;margin: 0 auto}
+#page2 div{width: 50%;float: left;height: 100%;line-height: 10rem;text-align: center;padding-top: 5rem}
+.gussTop{position: absolute;top: .5rem;left:2.8rem;display: block;margin: 0 auto;width: 5rem}
+.page2Left img{ width:3rem;margin: 0 auto;display: block}
+.page2Right img{width: 3.2rem;margin:0 auto;display: block}
+.page2Right .shake{animation-duration: 3s;}
+.page2Left .shake{animation-duration: 3s;animation-direction: alternate}
+.soundCon{position: absolute;right: .2rem;top: .2rem;width:1.3rem;z-index: 111}
+
+#page3{width: 100%;height: 100%;background: url("images/stBg.jpg") no-repeat center;background-size: 100% 100%;overflow: hidden;display: none;margin: 0 auto}
+.sTop{margin: 1rem auto 0;width: 6rem;display: block}
+.sTree{width: 8rem;display: block;margin: 1rem auto}
+.sMan{width: 8.5rem;position: absolute;bottom: 0;display:none;left: -80%;}
+
+#page4{width: 100%;height: 100%;overflow: hidden;background: url("images/deliver.jpg") no-repeat center;background-size:800% 100%;display: none}
+.point{position: absolute;top:11rem;left: 5.5rem;height: .3rem;width: .3rem;border-radius: 50%;animation:shadow 2s infinite;box-shadow: 0 0 10px 20px rgba(255,255,255,.6)}
+.point img{width: 1rem;margin-top: .1rem;animation-duration: 3s}
+
+@keyframes shadow {
+    0%{box-shadow: 0 0 10px 20px rgba(255,255,255,.6)}
+    50%{box-shadow: 0 0 10px 15px rgba(255,255,255,.6)}
+    100%{box-shadow: 0 0 10px 20px rgba(255,255,255,.6)}
+}
+
+@keyframes wave {
+    0%{background-position:0%}
+    100%{background-position: 100%}
+}

@@ -1,0 +1,25 @@
+前端Front
+
+Public公共文件夹-页面放公共头尾
+
+Public里面包括 JS CSS IMG 公共文件夹
+
+BrandX_Index.html - 首页
+BrandX_About.html - 关于BRANDX
+BrandX_Contact.html - 联系BRANDX
+BrandX_Join.html - 加入BRANDX
+BrandX_Service.html - BRANDX服务
+BrandX_Work.html - BRANDX作品
+BrandX_About_History.html - BRANDX历史
+BrandX_About_Know.html - 认识BRANDX
+BrandX_About_Value.html - BRANDX价值
+BrandX_About_LeadingTeam.html - 领导团队
+BrandX_Service_Decoration.html - 服务店装
+BrandX_Service_RoadShow.html - 服务路演
+BrandX_Service_Activity.html - 服务活动
+BrandX_Service_BigData.html - 服务大数据
+BrandX_Work_Decoration.html - 作品店装
+BrandX_Work_RoadShow.html - 作品路演
+BrandX_Work_Activity.html - 作品活动
+BrandX_Work_BigData.html - 作品大数据
+

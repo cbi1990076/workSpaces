@@ -1,0 +1,62 @@
+body,html{height: 100% ;width: 100%;margin: 0;padding: 0;background: url("../images/bg.jpg") no-repeat left top;background-size: 100%;overflow: hidden}
+img{-webkit-touch-callout:none}
+ul,li,ol{list-style: none}
+/*page1*/
+.loading{width: 100%;height: 100%;background: url("../images/loadingbg.jpg") no-repeat center;background-size: 100%}
+.lTop{width: 100%;overflow: hidden}
+.lTop img{ display: none;width: 6.46rem;margin:4.48rem auto 0;}
+.lTop img:first-child{display: block}
+.light{position: absolute;width: 100%;height: 30%;top: 11.2rem;overflow: hidden}
+.light .lightL{float: left;margin-left: 2.38rem;animation: swing1 2.5s linear infinite ;transform:rotate(-15deg);transform-origin: 50% top;}
+.light .lightR{float: right;margin-right: 2.38rem;animation: swing2 2.5s linear infinite ;transform:rotate(15deg);transform-origin: 50% top;}
+@keyframes swing1 {
+    50%{transform: rotate(15deg)}
+    100%{transform: rotate(-15deg)}
+}
+@keyframes swing2 {
+    50%{transform: rotate(-15deg)}
+    100%{transform: rotate(15deg)}
+}
+/*page 2*/
+.main{width: 100% ;height: 100%;overflow: hidden;display: none}
+.top{width: 100%;height: 7.14rem;overflow:hidden;margin-top: 3.1rem;position: relative;z-index: 9;background: url('../images/topBg.png') no-repeat .24rem top;background-size: 10.28rem}
+.top .blackCover{width: 9.52rem;height: 5.96rem;position: absolute;left:.66rem;top: .42rem;opacity:  .45;background-color: #000000;}
+.top .boxShadow{width: 9.52rem;height: 5.96rem;position: absolute;left:.66rem;top: .42rem;z-index:9}
+.top .text{width: 4.62rem;position: absolute;left: 50%;margin-left: -2.31rem;top: 3.2rem;z-index:9}
+.chick{position: absolute;left: .28rem;top: 9.98rem;z-index: 10;animation: swing3 2s linear infinite ;transform:rotate(-10deg);transform-origin: 50% top;}
+@keyframes swing3 {
+    50%{transform: rotate(10deg)}
+    100%{transform: rotate(-10deg)}
+}
+.cloud{position: absolute;top: 2.45rem;z-index: 1;left: 75%;animation: cloudTe 5s linear infinite;}
+@keyframes cloudTe {
+    100%{left: 10%;opacity: 0;}
+}
+#pic{width: 9.52rem;height:5.96rem;margin: .42rem auto;overflow: hidden}
+#pic img{width: 100%;}
+.mid{text-align: center;font-size: .8rem;color: #f0a020;width: 100%;margin-top: 2.24rem;margin-bottom: 1.44rem;font-family:'Microsoft YaHei', Arial}
+.bot{overflow: hidden;margin:0 1.5rem;overflow: hidden }
+.bot img{width: 1.56rem;}
+.bot div{float: left;margin-left: 1.54rem;width: 1.56rem;overflow: hidden}
+.bot .fir{margin: 0}
+.reload{display: none}
+.pause{display: none}
+.stop{display: none}
+/*page3*/
+.shareTop{width: 10.29rem;height: 7.08rem;overflow: hidden;margin-top: 3.1rem;position: relative;z-index: 9;background: url("../images/topBg.png") no-repeat ;background-size: 100% 100%;float: right;transform: rotate(-23deg)}
+.shareTop .boxShadow{width: 9.52rem;height: 5.96rem;position: absolute;left:.42rem;top: .42rem;}
+.shareBottom{overflow: hidden;margin: 4.33rem 1.68rem 0;width: 80%;padding-top: 3.85rem}
+.shareBottom div{float: left;margin-left: 2rem;}
+.shareBottom img{width: .95rem}
+.shareBottom .fir{margin: 0}
+.stopSound{display: none}
+.chichen{position: absolute;width: 1.22rem;left:2.28rem;top: 11.04rem;z-index:9;}
+.playMusic{position: fixed;right: .44rem;top: .44rem;width: .84rem;animation:rotae 5s infinite linear;}
+@keyframes rotae {
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+#shareCover{height: 100%;width: 100%;position: fixed;top: 0;left: 0;display: none;opacity: 1}
+#shareCover img{width: 8.42rem;position: absolute;top: 0;right: 0;z-index: 100}
+#shareCover .cover{position: absolute;top: 0;left: 0;background: black;opacity: .8;z-index: 90;height: 100%;width: 100%}

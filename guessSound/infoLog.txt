@@ -1,0 +1,40 @@
+2017-01-25 11:24:38  ------>>>>>>  {"access_token":"J7HqdzWPVfk0bjxtEI6mtXsyGs-9L0ahP5g0sAmg8seo-xy5oGvGR8DmmLf-YxvukXdcESn3mwhYHkM4vX4wq8_HbnscJIWkDrhAKIJQPvY","expires_in":7200,"refresh_token":"7lUXpWM5q59AhH00aJBrLBApMJ-48ASi4-DiC97wcAg6hHdRg2TiCn7qKYHbR5fxjXeqZqH_DhUyL-0tyipLAyIpCUpQ5dlE4RzCSWuJOvs","openid":"o8mP9js8qae3D-gEw2iyVw5lWH2k","scope":"snsapi_userinfo"}
+2017-01-25 11:24:38  ------>>>>>>  MySql语句插入成功 =INSERT INTO wxrz_token (openid,access_token,refresh_token,scope,token_time) VALUES ("o8mP9js8qae3D-gEw2iyVw5lWH2k","J7HqdzWPVfk0bjxtEI6mtXsyGs-9L0ahP5g0sAmg8seo-xy5oGvGR8DmmLf-YxvukXdcESn3mwhYHkM4vX4wq8_HbnscJIWkDrhAKIJQPvY","7lUXpWM5q59AhH00aJBrLBApMJ-48ASi4-DiC97wcAg6hHdRg2TiCn7qKYHbR5fxjXeqZqH_DhUyL-0tyipLAyIpCUpQ5dlE4RzCSWuJOvs","snsapi_userinfo","1485339878") 
+2017-01-25 11:24:38  ------>>>>>>  插入数据库成功 - token = J7HqdzWPVfk0bjxtEI6mtXsyGs-9L0ahP5g0sAmg8seo-xy5oGvGR8DmmLf-YxvukXdcESn3mwhYHkM4vX4wq8_HbnscJIWkDrhAKIJQPvY
+2017-01-25 11:24:38  ------>>>>>>  {"openid":"o8mP9js8qae3D-gEw2iyVw5lWH2k","nickname":"印晓宇","sex":1,"language":"zh_CN","city":"西城","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/6mXOeYa4HUibw3YNUHj1yWI3wZvm7rhzniaPlB7zcG5H12T66OB5dPzvmLMucJd9KCHRRUDE95HbeOJLSDFE8Maw\/0","privilege":[]}
+2017-01-25 11:24:38  ------>>>>>>  查询成功-sql语句  =  SELECT COUNT(*) as num from wx_userinfo where openid="o8mP9js8qae3D-gEw2iyVw5lWH2k"
+2017-01-25 11:24:38  ------>>>>>>  MySql语句更新成功 =UPDATE wx_userinfo SET nickname="印晓宇",sex="1",country="中国",city="西城",province="北京",headimgurl="http://wx.qlogo.cn/mmopen/6mXOeYa4HUibw3YNUHj1yWI3wZvm7rhzniaPlB7zcG5H12T66OB5dPzvmLMucJd9KCHRRUDE95HbeOJLSDFE8Maw/0",update_time="2017-01-25 11:24:38" where openid="o8mP9js8qae3D-gEw2iyVw5lWH2k"
+2017-01-25 11:24:38  ------>>>>>>  用户信息更新成功 
+2017-01-25 11:24:53  ------>>>>>>  查询成功-sql语句  =  SELECT COUNT(*) as num from wx_userscore where openid="o8mP9js8qae3D-gEw2iyVw5lWH2k"
+2017-01-25 11:24:53  ------>>>>>>  MySql语句更新成功 =UPDATE wx_userscore SET score="50" where openid="o8mP9js8qae3D-gEw2iyVw5lWH2k"
+2017-01-25 11:24:53  ------>>>>>>  更新用户分数成功！
+2017-01-25 11:24:53  ------>>>>>>  查询成功-sql语句  =  SELECT score from wx_userscore where 1=1
+2017-01-25 11:24:53  ------>>>>>>  查询成功-sql语句  =  SELECT nickname from wx_userinfo where openid="o8mP9js8qae3D-gEw2iyVw5lWH2k"
+2017-01-25 11:24:53  ------>>>>>>  {"info":true,"openid":"o8mP9js8qae3D-gEw2iyVw5lWH2k","userName":[{"nickname":"???"}],"victory":"66"}
+2017-01-25 11:30:57  ------>>>>>>  {"errcode":41008,"errmsg":"missing code, hints: [ req_id: SEZCLA0258ns80 ]"}
+2017-01-25 11:30:57  ------>>>>>>  MySql语句插入成功 =INSERT INTO wxrz_token (openid,access_token,refresh_token,scope,token_time) VALUES ("","","","","1485340257") 
+2017-01-25 11:30:57  ------>>>>>>  插入数据库成功 - token = 
+2017-01-25 11:30:57  ------>>>>>>  {"errcode":41001,"errmsg":"access_token missing, hints: [ req_id: PApsda0258s114 ]"}
+2017-01-25 11:30:57  ------>>>>>>  查询成功-sql语句  =  SELECT COUNT(*) as num from wx_userinfo where openid=""
+2017-01-25 11:30:57  ------>>>>>>  MySql语句更新成功 =UPDATE wx_userinfo SET nickname="",sex="",country="",city="",province="",headimgurl="",update_time="2017-01-25 11:30:57" where openid=""
+2017-01-25 11:30:57  ------>>>>>>  用户信息更新成功 
+2017-01-25 11:42:13  ------>>>>>>  {"errcode":40029,"errmsg":"invalid code, hints: [ req_id: GMz_va0934s112 ]"}
+2017-01-25 11:42:13  ------>>>>>>  MySql语句插入成功 =INSERT INTO wxrz_token (openid,access_token,refresh_token,scope,token_time) VALUES ("","","","","1485340933") 
+2017-01-25 11:42:13  ------>>>>>>  插入数据库成功 - token = 
+2017-01-25 11:42:13  ------>>>>>>  {"errcode":41001,"errmsg":"access_token missing, hints: [ req_id: NpZW9a0934s120 ]"}
+2017-01-25 11:42:13  ------>>>>>>  查询成功-sql语句  =  SELECT COUNT(*) as num from wx_userinfo where openid=""
+2017-01-25 11:42:13  ------>>>>>>  MySql语句更新成功 =UPDATE wx_userinfo SET nickname="",sex="",country="",city="",province="",headimgurl="",update_time="2017-01-25 11:42:13" where openid=""
+2017-01-25 11:42:13  ------>>>>>>  用户信息更新成功 
+2017-01-26 05:52:30  ------>>>>>>  {"errcode":40029,"errmsg":"invalid code, hints: [ req_id: TI1N9a0350s102 ]"}
+2017-01-26 05:52:30  ------>>>>>>  MySql语句插入成功 =INSERT INTO wxrz_token (openid,access_token,refresh_token,scope,token_time) VALUES ("","","","","1485406350") 
+2017-01-26 05:52:30  ------>>>>>>  插入数据库成功 - token = 
+2017-01-26 05:52:30  ------>>>>>>  {"errcode":41001,"errmsg":"access_token missing, hints: [ req_id: M6ukCA0350s111 ]"}
+2017-01-26 05:52:30  ------>>>>>>  查询成功-sql语句  =  SELECT COUNT(*) as num from wx_userinfo where openid=""
+2017-01-26 05:52:30  ------>>>>>>  MySql语句更新成功 =UPDATE wx_userinfo SET nickname="",sex="",country="",city="",province="",headimgurl="",update_time="2017-01-26 05:52:30" where openid=""
+2017-01-26 05:52:30  ------>>>>>>  用户信息更新成功 
+2017-01-26 13:16:48  ------>>>>>>  查询成功-sql语句  =  SELECT COUNT(*) as num from wx_userscore where openid=""
+2017-01-26 13:16:48  ------>>>>>>  MySql语句更新成功 =UPDATE wx_userscore SET score="" where openid=""
+2017-01-26 13:16:48  ------>>>>>>  更新用户分数成功！
+2017-01-26 13:16:48  ------>>>>>>  查询成功-sql语句  =  SELECT score from wx_userscore where 1=1
+2017-01-26 13:16:48  ------>>>>>>  查询成功-sql语句  =  SELECT nickname from wx_userinfo where openid=""
+2017-01-26 13:16:48  ------>>>>>>  {"info":true,"openid":null,"userName":[{"nickname":""}],"victory":"6."}
