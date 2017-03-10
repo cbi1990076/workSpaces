@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="lib/jquery-2.2.0.min.js"></script>
+</head>
+<body>
+    <img src="images/tebg.jpg" style="width: 100%;height: auto">
+    <div style="position: absolute;z-index: 10;top: 668px;left: 32%;width: 312px;height: auto;">
+        <img src="images/tezhongjianb.png" style="width: 312px;position:absolute;z-index: 20;">
+        <img src="images/tezhongjiana.png" style="width: 266px;position:absolute;z-index: 100;top: 23px;left: 23px">
+        <img id="btn" src="images/teicon.png" style="width: 208px;position:relative;z-index: 200;top: 52px;left: 52px;">
+        <div style="position: relative;z-index: 200;top: 150px;width:100%;text-align: center;font-family: '黑体';color: #efeff4;font-size: 64px;">画面重置</div>
+    </div>
+</body>
+    <script type="application/javascript">
+
+        var btn = document.getElementById('btn');
+
+        //监听操作
+        btn.addEventListener('touchstart',function(e){
+
+            var url = "operationTime.php";
+
+            var param = {
+
+                "num" :"0"
+
+            };
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                dataType: "json",
+                data: param,
+                async: false,
+                success: function (data, status) {
+                    console.log(data);
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log("Error " + textStatus);
+                }
+            });
+        });
+
+    </script>
+
+</html>

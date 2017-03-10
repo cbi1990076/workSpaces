@@ -17,6 +17,6 @@
 
     logRemark("interFace.txt","0");
 
-    return "OK";
+    echo "OK";
 
 ?>
