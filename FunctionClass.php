@@ -467,7 +467,7 @@ function upd_sql($numKey,$numValue,$table,$whereKey,$whereValue){
 
     }else {
 
-        $sql.="where 1=1";
+        $sql.=" where 1=1";
 
     }
 
@@ -695,7 +695,7 @@ function wx_UserInfo($openid,$userToken){
     $user_Url = file_get_contents($userInfo_Url);
 
     //返回值记入日志
-    logInfo($user_Url);
+    logInfo("user_Url = ".$user_Url);
 
     //json转译
     $userInfo = json_decode($user_Url, true);

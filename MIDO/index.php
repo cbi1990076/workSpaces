@@ -6,6 +6,8 @@
 
     include 'FunctionClass.php';
 
+    session_start();
+
     //判断是否开始 0未开始 1已开始
     $typePath = "Type.txt";
 
@@ -24,53 +26,43 @@
 
             $state=$_REQUEST['state'];
 
-            $tokenArray = wx_UserToken($code, $state);
-
-            if ($tokenArray==false){
-
-                $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf508733f4f12c592&redirect_uri=http%3a%2f%2fwww.brandxspace.com%2fMIDO%2findex.php&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
-
-                echo "<script language=\"javascript\">";
-
-                echo "location.href=\"$url\"";
-
-                echo "</script>";
-
-            }
-
-            $userInfo = wx_UserInfo($tokenArray['openid'], $tokenArray['token']);
-
             $num = (int)$num+1;
-
-            $numKey = array("openid");
-
-            $numValue = array($userInfo['openid']);
-
-            $table = "wx_openid";
 
             switch ($num){
 
                 case 1:
 
-                    $oidRes = upd_sql($numKey,$numValue,$table,"","");
+                    $_SESSION['code'] = $code;
 
-                    $saveURL = $num.".jpg";
+                    $tokenArray = wx_UserToken($code, $state);
 
-                    saveImage($userInfo['HeadImgUrl'],$saveURL);
+                    if (json_encode($tokenArray)=="false"){
 
-                    resize_image($saveURL,"jpg",640,640);
+                        $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf508733f4f12c592&redirect_uri=http%3a%2f%2fwww.brandxspace.com%2fMIDO%2findex.php&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
 
-                    logRemark($numPath,$num);
+                        echo "<script language=\"javascript\">";
 
-                    echo "成功参与！";
+                        echo "location.href=\"$url\"";
 
-                    break;
+                        echo "</script>";
 
-                case 2:
+                    }
 
-                    $oidRes = sel_countSql($table,$numKey,$numValue);
+                    if($tokenArray['openid']!="" && $tokenArray['openid']!=null && $tokenArray['openid']!=false){
 
-                    if ($oidRes<1){
+                        $userInfo = wx_UserInfo($tokenArray['openid'], $tokenArray['token']);
+
+                        $numKey = array("openid");
+
+                        $numValue = array($userInfo['openid']);
+
+                        $whereKey = array("id");
+
+                        $whereValue = array(1);
+
+                        $table = "wx_openid";
+
+                        $oidRes = upd_sql($numKey,$numValue,$table,$whereKey,$whereValue);
 
                         $saveURL = $num.".jpg";
 
@@ -84,7 +76,69 @@
 
                     }else{
 
-                        echo "您已参与！";
+                        echo "请勿重复刷新！";
+
+                    }
+
+                    break;
+
+                case 2:
+
+                    if ($_SESSION['code'] != $code){
+
+                        $tokenArray = wx_UserToken($code, $state);
+
+                        if (json_encode($tokenArray)=="false"){
+
+                            $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf508733f4f12c592&redirect_uri=http%3a%2f%2fwww.brandxspace.com%2fMIDO%2findex.php&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+
+                            echo "<script language=\"javascript\">";
+
+                            echo "location.href=\"$url\"";
+
+                            echo "</script>";
+
+                        }
+
+                        $userInfo = wx_UserInfo($tokenArray['openid'], $tokenArray['token']);
+
+                        $numKey = array("openid");
+
+                        $numValue = array($userInfo['openid']);
+
+                        $whereKey = array("id");
+
+                        $whereValue = array(1);
+
+                        $table = "wx_openid";
+
+                        $oidRes = sel_countSql($table,$numKey,$numValue,$whereKey,$whereValue);
+
+                        $_SESSION['code'] = $code;
+
+                        if ($oidRes<1){
+
+                            $saveURL = $num.".jpg";
+
+                            saveImage($userInfo['HeadImgUrl'],$saveURL);
+
+                            resize_image($saveURL,"jpg",640,640);
+
+                            logRemark($numPath,$num);
+
+                            echo "成功参与！";
+
+                        }else{
+
+                            echo "您已参与！";
+
+                        }
+
+                    }else{
+
+                        $_SESSION['code'] = $code;
+
+                        echo "您已参与游戏！";
 
                     }
 
